@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50A417202E668630007FD659 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4171F2E668630007FD659 /* ViewController.swift */; };
 		50A4174E2E66875E007FD659 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 50A4174D2E66875E007FD659 /* SnapKit */; };
-		50A417502E66875E007FD659 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 50A4174F2E66875E007FD659 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		50A417182E668630007FD659 /* CalculatorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		50A4171F2E668630007FD659 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50A4172E2E668631007FD659 /* CalculatorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A417382E668631007FD659 /* CalculatorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -47,6 +44,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		50481D922E668A640081A8C2 /* lv1 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lv1;
+			sourceTree = "<group>";
+		};
 		50A4171A2E668630007FD659 /* CalculatorApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -68,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A4174E2E66875E007FD659 /* SnapKit in Frameworks */,
-				50A417502E66875E007FD659 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +93,7 @@
 		50A4170F2E668630007FD659 = {
 			isa = PBXGroup;
 			children = (
-				50A4171F2E668630007FD659 /* ViewController.swift */,
+				50481D922E668A640081A8C2 /* lv1 */,
 				50A417512E6687A2007FD659 /* Delegate */,
 				50A4171A2E668630007FD659 /* CalculatorApp */,
 				50A417192E668630007FD659 /* Products */,
@@ -125,13 +126,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				50481D922E668A640081A8C2 /* lv1 */,
 				50A4171A2E668630007FD659 /* CalculatorApp */,
 				50A417512E6687A2007FD659 /* Delegate */,
 			);
 			name = CalculatorApp;
 			packageProductDependencies = (
 				50A4174D2E66875E007FD659 /* SnapKit */,
-				50A4174F2E66875E007FD659 /* SnapKit-Dynamic */,
 			);
 			productName = CalculatorApp;
 			productReference = 50A417182E668630007FD659 /* CalculatorApp.app */;
@@ -253,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50A417202E668630007FD659 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,11 +583,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 50A4174C2E66875E007FD659 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		50A4174F2E66875E007FD659 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 50A4174C2E66875E007FD659 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
