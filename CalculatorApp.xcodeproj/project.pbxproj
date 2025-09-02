@@ -49,6 +49,11 @@
 			path = lv1;
 			sourceTree = "<group>";
 		};
+		50481E0E2E66B4C60081A8C2 /* lv2 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lv2;
+			sourceTree = "<group>";
+		};
 		50A4171A2E668630007FD659 /* CalculatorApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -93,6 +98,7 @@
 		50A4170F2E668630007FD659 = {
 			isa = PBXGroup;
 			children = (
+				50481E0E2E66B4C60081A8C2 /* lv2 */,
 				50481D922E668A640081A8C2 /* lv1 */,
 				50A417512E6687A2007FD659 /* Delegate */,
 				50A4171A2E668630007FD659 /* CalculatorApp */,
@@ -127,6 +133,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				50481D922E668A640081A8C2 /* lv1 */,
+				50481E0E2E66B4C60081A8C2 /* lv2 */,
 				50A4171A2E668630007FD659 /* CalculatorApp */,
 				50A417512E6687A2007FD659 /* Delegate */,
 			);
