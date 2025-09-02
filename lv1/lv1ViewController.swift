@@ -1,27 +1,35 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class lv1ViewController: UIViewController {
     
-    private let lv1ViewMain = lv1View()
-    
+    let resultText = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
+    }
+    
+    private func setUpUI(){
         
-        view.addSubview(lv1ViewMain)
+        resultText.backgroundColor = .black
+        resultText.font = .boldSystemFont(ofSize: 60)
+        resultText.textAlignment = .right
+        resultText.text = "12345"
+        resultText.textColor = .white
         
-        lv1ViewMain.snp.makeConstraints(){
+        view.addSubview(resultText)
+        
+        resultText.snp.makeConstraints{
             make in
-            make.top.equalTo(view.snp.top)
-            make.bottom.equalTo(view.snp.bottom)
-            make.leading.equalTo(view.snp.leading)
-            make.trailing.equalTo(view.snp.trailing)
+            make.top.equalToSuperview().offset(200)
+            make.leading.equalToSuperview().offset(30)
+            make.trailing.equalToSuperview().offset(-30)
+            make.height.equalTo(100)
         }
     }
-
-
+    
 }
 
 #Preview{
-    ViewController()
+    lv1ViewController()
 }
