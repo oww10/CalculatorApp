@@ -1,8 +1,7 @@
 import UIKit
 import SnapKit
 
-
-class lv3ViewController: UIViewController, makeLineButtons{
+class lv4ViewController: UIViewController, makeLineButtons{
     let resultText: UILabel = {
         let text = UILabel()
         let but = UIButton()
@@ -43,6 +42,7 @@ class lv3ViewController: UIViewController, makeLineButtons{
         
         
         for view in views {
+            
             stackView.addArrangedSubview(view)
         }
         
@@ -63,33 +63,40 @@ class lv3ViewController: UIViewController, makeLineButtons{
         configureUI()
     }
     
+    @objc func buttonTapped(){
+        print("buttonTap")
+    }
+    
     
     private func configureUI(){
         view.backgroundColor = .black
         view.addSubview(resultText)
         
-        //Utils의 ButtonMakeProtocol의 변화로 인해 오류 발생. 다시 실행시키기 위해서는 target과, action을 추가시켜야함.
-//        let firstButtonsLine = makeButtonLine(buttonTitle: ["7","4","1","AC"])
-//        let secondButtonsLine = makeButtonLine(buttonTitle: ["8","5","2","0"])
-//        let thirdButtonsLine = makeButtonLine(buttonTitle: ["9","6","3","="])
-//        let fourthButtonsLine = makeButtonLine(buttonTitle: ["+","-","*","/"])
-//        
-//        let firstVerticalView = makeVerticalStackView(firstButtonsLine)
-//        let secondVerticalView = makeVerticalStackView(secondButtonsLine)
-//        let thirdVerticalView = makeVerticalStackView(thirdButtonsLine)
-//        let fourthVerticalView = makeVerticalStackView(fourthButtonsLine)
+        let firstButtonsLine = makeButtonLine(buttonTitle: ["7","4","1","AC"]
+                                              ,target: self, action: #selector(buttonTapped))
+        let secondButtonsLine = makeButtonLine(buttonTitle: ["8","5","2","0"]
+                                               ,target: self, action: #selector(buttonTapped))
+        let thirdButtonsLine = makeButtonLine(buttonTitle: ["9","6","3","="]
+                                              ,target: self, action: #selector(buttonTapped))
+        let fourthButtonsLine = makeButtonLine(buttonTitle: ["+","-","*","/"]
+                                               ,target: self, action: #selector(buttonTapped))
+        
+        let firstVerticalView = makeVerticalStackView(firstButtonsLine)
+        let secondVerticalView = makeVerticalStackView(secondButtonsLine)
+        let thirdVerticalView = makeVerticalStackView(thirdButtonsLine)
+        let fourthVerticalView = makeVerticalStackView(fourthButtonsLine)
         
         
-//        [firstVerticalView,secondVerticalView,thirdVerticalView,fourthVerticalView].forEach{
-//            view.addSubview($0)
-//        }
-//        
-//        view.addSubview(buttonsStackView)
-//        [firstVerticalView,secondVerticalView,thirdVerticalView,fourthVerticalView].forEach{
-//            buttonsStackView.addArrangedSubview($0)
-//        }
+        [firstVerticalView,secondVerticalView,thirdVerticalView,fourthVerticalView].forEach{
+            view.addSubview($0)
+        }
         
-         
+        view.addSubview(buttonsStackView)
+        [firstVerticalView,secondVerticalView,thirdVerticalView,fourthVerticalView].forEach{
+            buttonsStackView.addArrangedSubview($0)
+        }
+        
+        
         resultText.snp.makeConstraints{
             make in
             make.leading.equalToSuperview().offset(30)
@@ -97,17 +104,17 @@ class lv3ViewController: UIViewController, makeLineButtons{
             make.top.equalToSuperview().offset(200)
             make.height.equalTo(100)
         }
-
-//        buttonsStackView.snp.makeConstraints{
-//            make in
-//            make.width.equalTo(350)
-//            make.top.equalTo(resultText.snp.bottom).offset(60)
-//            make.centerX.equalToSuperview()
-//        }
+        
+        buttonsStackView.snp.makeConstraints{
+            make in
+            make.width.equalTo(350)
+            make.top.equalTo(resultText.snp.bottom).offset(60)
+            make.centerX.equalToSuperview()
+        }
         
     }
     
 }
 #Preview{
-    lv3ViewController()
+    lv4ViewController()
 }
