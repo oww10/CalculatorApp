@@ -44,52 +44,12 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		50481D922E668A640081A8C2 /* lv1 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = lv1;
-			sourceTree = "<group>";
-		};
-		50481E0E2E66B4C60081A8C2 /* lv2 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = lv2;
-			sourceTree = "<group>";
-		};
 		50A4171A2E668630007FD659 /* CalculatorApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				50A417402E668631007FD659 /* Exceptions for "CalculatorApp" folder in "CalculatorApp" target */,
 			);
 			path = CalculatorApp;
-			sourceTree = "<group>";
-		};
-		50A417512E6687A2007FD659 /* Delegate */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Delegate;
-			sourceTree = "<group>";
-		};
-		50C54D382E67C3B90027A46B /* lv3 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = lv3;
-			sourceTree = "<group>";
-		};
-		50C54D3F2E67DEB30027A46B /* lv4 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = lv4;
-			sourceTree = "<group>";
-		};
-		50C54D422E67DF200027A46B /* Utils */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		50C54D502E67F00E0027A46B /* lv5 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = lv5;
-			sourceTree = "<group>";
-		};
-		50C54D552E6807050027A46B /* lv6 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = lv6;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -123,14 +83,6 @@
 		50A4170F2E668630007FD659 = {
 			isa = PBXGroup;
 			children = (
-				50C54D422E67DF200027A46B /* Utils */,
-				50C54D552E6807050027A46B /* lv6 */,
-				50C54D502E67F00E0027A46B /* lv5 */,
-				50C54D3F2E67DEB30027A46B /* lv4 */,
-				50C54D382E67C3B90027A46B /* lv3 */,
-				50481E0E2E66B4C60081A8C2 /* lv2 */,
-				50481D922E668A640081A8C2 /* lv1 */,
-				50A417512E6687A2007FD659 /* Delegate */,
 				50A4171A2E668630007FD659 /* CalculatorApp */,
 				50A417192E668630007FD659 /* Products */,
 			);
@@ -162,15 +114,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				50481D922E668A640081A8C2 /* lv1 */,
-				50481E0E2E66B4C60081A8C2 /* lv2 */,
 				50A4171A2E668630007FD659 /* CalculatorApp */,
-				50A417512E6687A2007FD659 /* Delegate */,
-				50C54D382E67C3B90027A46B /* lv3 */,
-				50C54D3F2E67DEB30027A46B /* lv4 */,
-				50C54D422E67DF200027A46B /* Utils */,
-				50C54D502E67F00E0027A46B /* lv5 */,
-				50C54D552E6807050027A46B /* lv6 */,
 			);
 			name = CalculatorApp;
 			packageProductDependencies = (
