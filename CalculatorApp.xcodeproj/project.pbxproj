@@ -67,6 +67,11 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		50C54D382E67C3B90027A46B /* lv3 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lv3;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 		50A4170F2E668630007FD659 = {
 			isa = PBXGroup;
 			children = (
+				50C54D382E67C3B90027A46B /* lv3 */,
 				50481E0E2E66B4C60081A8C2 /* lv2 */,
 				50481D922E668A640081A8C2 /* lv1 */,
 				50A417512E6687A2007FD659 /* Delegate */,
@@ -136,6 +142,7 @@
 				50481E0E2E66B4C60081A8C2 /* lv2 */,
 				50A4171A2E668630007FD659 /* CalculatorApp */,
 				50A417512E6687A2007FD659 /* Delegate */,
+				50C54D382E67C3B90027A46B /* lv3 */,
 			);
 			name = CalculatorApp;
 			packageProductDependencies = (
