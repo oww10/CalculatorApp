@@ -87,6 +87,11 @@
 			path = lv5;
 			sourceTree = "<group>";
 		};
+		50C54D552E6807050027A46B /* lv6 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = lv6;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				50C54D422E67DF200027A46B /* Utils */,
+				50C54D552E6807050027A46B /* lv6 */,
 				50C54D502E67F00E0027A46B /* lv5 */,
 				50C54D3F2E67DEB30027A46B /* lv4 */,
 				50C54D382E67C3B90027A46B /* lv3 */,
@@ -164,6 +170,7 @@
 				50C54D3F2E67DEB30027A46B /* lv4 */,
 				50C54D422E67DF200027A46B /* Utils */,
 				50C54D502E67F00E0027A46B /* lv5 */,
+				50C54D552E6807050027A46B /* lv6 */,
 			);
 			name = CalculatorApp;
 			packageProductDependencies = (
