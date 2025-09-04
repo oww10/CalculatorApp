@@ -64,7 +64,7 @@ ButtonMakeProtocol을 정의하여 Calculator 뷰 컨트롤러의 역할을 명�
 UI를 구성하는 configureUI() 메서드나 계산을 수행하는 calculate(expression:) 함수 등을 private으로 선언하여 외부에서 직접 접근할 수 없도록 했습니다.
 효과: Calculator 클래스의 내부 구현을 숨기고, 외부에서는 오직 공개된 API(사용자 터치 등)를 통해서만 상호작용하도록 강제하여 안정성을 높입니다.
 
-### ⚙️ 주요 컴포넌트 요약<br />
+## ⚙️ 주요 컴포넌트 요약<br />
 
 #### Calculator.swift<br />
 앱의 핵심. UI 요소(UILabel, UIButton)의 생명주기를 관리합니다.
@@ -78,6 +78,14 @@ makeButtonLine이라는 메서드를 통해 버튼 한 줄(배열)을 생성하�
 
 #### NSExpression<br />
 "10+5*2"와 같은 문자열 형태의 수식을 직접 해석하고 계산하는 강력한 클래스입니다. 덕분에 복잡한 후위 표기식 변환이나 연산자 우선순위 처리 로직을 직접 구현할 필요가 없었습니다.
+
+## ❌예외 처리
+
+사용자 정의 오류 처리: 'do -catch' 구문과 'enum Error'를 활용하여 [5*/2] 와 같이 계산할 수 없는 수식이 입력되었을 때 앱이 종료(Crash)되지 않고 안정적으로 오류를 처리하도록 구현했습니다.
+
+연속 연산자 방지: [5++2] 와 같이 수학적으로 성립하지 않는 연속된 연산자 입력을 로직에서 차단 했습니다.
+
+불완전한 수식 처리: [10 * ] 처럼 연산자로 끝나는 불완전한 수식에 대해 결과값[=]을 시도할 경우 입력을 초기화 시켰습니다.
 
 ## 💻 IDEs/Editors<br />
 ![Xcode](https://img.shields.io/badge/Xcode-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)<br />
