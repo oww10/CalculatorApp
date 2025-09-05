@@ -3,7 +3,12 @@ import SnapKit
 
 class Calculator: UIViewController, makeLineButtons{
     
-    let operators = ["+", "-", "*", "/"]
+    let operators: [String] = [
+        buttonTitle.PlusSign.rawValue,
+        buttonTitle.MinusSign.rawValue,
+        buttonTitle.MultipleSign.rawValue,
+        buttonTitle.DivSign.rawValue,
+    ]
     let resultText: UILabel = {
         var text = UILabel()
         text.text = "0"
@@ -45,9 +50,9 @@ class Calculator: UIViewController, makeLineButtons{
     
     @objc func buttonTapped(_ sender: UIButton){
         // resultText.Text 에 표시된 텍스트
-        let defaltTextNum = resultText.text ?? "0"
+        guard let defaltTextNum = resultText.text else{return}
         // 현재 resultText.Text의 마지막 문자를 가져옴
-        let lastChar = defaltTextNum.last ?? "1"
+        guard let lastChar = defaltTextNum.last else{return}
         
         //문자열의 수식을 계산하여 Int로 반환하는 함수
         func calculate(expression: String) throws -> Int? {
@@ -62,16 +67,14 @@ class Calculator: UIViewController, makeLineButtons{
         
         //클릭한 버튼의 title을 안전하게 가져오기
         guard let buttonNum: String = sender.title(for: .normal) else{ return }
-        
-        
-        
+
         //내가 누른 버튼의 title이 "AC"이면 0으로 초기화.
-        if buttonNum == "AC"{
+        if buttonNum ==  buttonTitle.AllClear.rawValue{
             print(defaltTextNum)
             resultText.text = "0"
         }
         //내가 누른 버튼의 title이 "=" 이면 실행
-        else if buttonNum == "="{
+        else if buttonNum == buttonTitle.EqualsSign.rawValue{
             
             //예외 처리: 수식이 연산자로 끝나는 경우 0으로 초기화
             if operators.contains(String(lastChar)) {

@@ -1,11 +1,20 @@
 import UIKit
 import SnapKit
 
+enum buttonTitle: String{
+    case AllClear = "AC"
+    case EqualsSign = "="
+    case PlusSign = "+"
+    case MinusSign = "-"
+    case MultipleSign = "*"
+    case DivSign = "/"
+}
 
 protocol makeLineButtons{
     func makeButtonLine(buttonTitle: [String], target: Any?, action: Selector) -> [UIButton]
     
 }
+
 
 extension makeLineButtons{
     
@@ -18,6 +27,7 @@ extension makeLineButtons{
             button.titleLabel?.font = .boldSystemFont(ofSize: 30)
             button.setTitle(buttonTitle[title], for: .normal)
             button.addTarget(self, action: action, for: .touchUpInside)
+
             if Int(buttonTitle[title]) == nil {
                 button.backgroundColor = .orange
             } else{
